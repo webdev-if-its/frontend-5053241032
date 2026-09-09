@@ -1,4 +1,4 @@
-# frontend-nrp
+# frontend-5053241032
 
 Repo tugas mata kuliah **Frontend**, dibuat dari template [`webdev-if-its/frontend-template`](https://github.com/webdev-if-its/frontend-template). Ganti judul di atas jadi nama repo kalian sendiri (`frontend-nrp`, contoh: `frontend-5025201012`).
 
@@ -27,15 +27,15 @@ Kalau dosen memperbaiki sesuatu di pertemuan yang sudah dirilis (mis. ada bug di
 Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (lihat `pertemuan-XX/SOAL.md`) — heading-nya dicek otomatis, jangan diganti namanya.
 
 ## Struktur Project
-(tulis di sini)
+App.tsx menjadi sebuah komponen root yang nantinya akan dipakai oleh main.tsx, agar mudah mengeditnya di kedepannya. semisal ada yang ingin dirubah, developer hanya perlu mengubah di bagian App.tsx
 
 ## Identitas
-- Nama: (tulis di sini)
-- NRP: (tulis di sini)
-- Kelas: (tulis di sini)
+- Nama: Danendra Nayottama Hadi
+- NRP: 5053241032
+- Kelas: M
 
 ## Commit vs Push
-(tulis di sini)
+Perbedaan commit dan push adalah, commit adalah fase atau tahapan dimana kode" yang telah di tulis sudah tersimpan dan siap di publish, namun push adalah proses mempublikasi update dan perubahan yang telah dilakukan
 
 ## JSX vs TSX
 (tulis di sini)
