@@ -38,7 +38,7 @@ App.tsx menjadi sebuah komponen root yang nantinya akan dipakai oleh main.tsx, a
 Perbedaan commit dan push adalah, commit adalah fase atau tahapan dimana kode" yang telah di tulis sudah tersimpan dan siap di publish, namun push adalah proses mempublikasi update dan perubahan yang telah dilakukan
 
 ## JSX vs TSX
-(tulis di sini)
+JSX adalah extensi yang menggunakan bahasa JavaSript, sedangkan TSX adalah extensi yang menggunakan bahasa TypeScript. TSX juga mendukung type checking, type checking sendiri dapat mempermudah developer melihat kesalahannya dimana saat terjadinya error data type.
 
 ## Kenapa Union Type untuk Status
 (tulis di sini)
