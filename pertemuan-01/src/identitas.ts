@@ -13,5 +13,6 @@ export function resolveNama(args: string[], fallback: string): string {
 // TODO(Level 5): gabungkan Nama, NRP, dan process.version jadi satu string
 // siap cetak (lihat contoh format di SOAL.md).
 export function cetakInfo(nama: string): string {
-  return 'TODO'
+
+return "Nama: " + nama + "\nNRP: " + NRP + process.version
 }
