@@ -41,7 +41,7 @@ Perbedaan commit dan push adalah, commit adalah fase atau tahapan dimana kode" y
 JSX adalah extensi yang menggunakan bahasa JavaSript, sedangkan TSX adalah extensi yang menggunakan bahasa TypeScript. TSX juga mendukung type checking, type checking sendiri dapat mempermudah developer melihat kesalahannya dimana saat terjadinya error data type.
 
 ## Kenapa Union Type untuk Status
-(tulis di sini)
+Union type berguna buat status karena union type memastikan tidak ada ambiguitas/kemungkinan lainnya selain yang di deklarasikan. contoh di status ada 'pending', nah semisal nanti diisi "pendinggg" akan muncul error.
 
 ## Refleksi
 (tulis di sini)

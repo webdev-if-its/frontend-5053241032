@@ -2,6 +2,20 @@
 // `Status` dari '../types', jangan tulis ulang union-nya di sini). Lalu
 // render teks berbeda sesuai status: pending -> "Menunggu", selesai ->
 // "Selesai", batal -> "Dibatalkan". Lihat SOAL.md untuk kontrak lengkap.
-export function StatusPesanan(props: any) {
-  return <p>TODO</p>
+import type { Status } from "../types";
+
+interface statusProps{
+  status: Status
+}
+
+export function StatusPesanan(props: statusProps) {
+  if (props.status === "pending") {
+    return <p>Menunggu</p>
+  }
+  if (props.status === "selesai") {
+    return <p>Selesai</p>
+  }
+  if (props.status === "batal") {
+    return <p>Dibatalkan</p>
+  }
 }
