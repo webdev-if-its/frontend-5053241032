@@ -44,4 +44,4 @@ JSX adalah extensi yang menggunakan bahasa JavaSript, sedangkan TSX adalah exten
 Union type berguna buat status karena union type memastikan tidak ada ambiguitas/kemungkinan lainnya selain yang di deklarasikan. contoh di status ada 'pending', nah semisal nanti diisi "pendinggg" akan muncul error.
 
 ## Refleksi
-(tulis di sini)
+Karena ini pertama kali menggunakan TS, sedikit membinggungkan bahasanya dibanding dengan go lang untuk backend. aku baru tau kegunaan fragment itu biar mengurangi div div yang tidak perlu tapi masih bisa ngewrap sesuatu biar rapi. terus untuk jsx masih agak bingung tapi yang aku dapet itu buat jika mau makai fitur" html bisa menggunakan jsx.
