@@ -7,6 +7,14 @@
 //   bernilai true, dan TIDAK ada class itu sama sekali saat false,
 // - menampilkan teks tugas di dalamnya.
 // Lihat SOAL.md untuk kontrak lengkap.
-export function KartuTugas(props: any) {
-  return <div>TODO</div>
+import tailwind from "tailwindcss"
+
+type kartuProps = {
+  teks: string,
+  selesai:boolean,
+}
+export function KartuTugas({teks, selesai}: kartuProps) {
+  return <div className={`p-4 rounded-xl shadow ${selesai ? 'line-through' : ''}`}>
+    {teks}
+  </div>
 }
