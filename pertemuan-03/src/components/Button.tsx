@@ -18,10 +18,10 @@ type btnProps = {
 
 export function Button({ variant, children, onClick }: btnProps) {
   if (variant === "primary") {
-    return <button className="bg-green-400" onClick={onClick}>{ children }</button>
+    return <button className="bg-green-400" onClick={onClick}>{children}</button>
   } else if (variant === "secondary") {
-    return <button className="bg-purple-500"onClick={onClick}>{ children }</button>
+    return <button className="bg-purple-500" onClick={onClick}>{children}</button>
   } else if (variant === "danger") {
-    return <button className="bg-red-500"onClick={onClick}>{ children }</button>
+    return <button className="bg-red-500" onClick={onClick}>{children}</button>
   }
 }

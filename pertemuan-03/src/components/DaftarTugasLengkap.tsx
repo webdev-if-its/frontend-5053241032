@@ -8,6 +8,27 @@
 //   tersebut — MANFAATKAN KEMBALI komponen Button dari Level 7, jangan
 //   tulis <button> baru dari nol.
 // Lihat SOAL.md untuk kontrak lengkap.
-export function DaftarTugasLengkap(props: any) {
-  return <p>TODO</p>
+import type { Tugas } from '../types'
+import { Button } from './Button'
+
+type tugasLengkapProps = {
+  tugas: Tugas[]
+  onHapus: (id: string) => void
+}
+
+export function DaftarTugasLengkap({ tugas, onHapus }: tugasLengkapProps) {
+  if (tugas.length === 0) {
+    return <p>Tidak ada tugas</p>
+  }
+
+  return <ul>
+    {tugas.map((item) => (
+      <li key={item.id}>
+        {item.teks}
+        <Button variant="danger" onClick={() => onHapus(item.id)}>
+          Hapus
+        </Button>
+      </li>
+      ))}
+    </ul>
 }
