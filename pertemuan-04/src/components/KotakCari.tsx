@@ -3,6 +3,15 @@
 // HANYA ketika tombol Enter ditekan (onKeyDown + e.key) — tombol lain tidak
 // boleh memicu onCari.
 // Lihat SOAL.md untuk kontrak lengkap.
-export function KotakCari(props: any) {
-  return <p>TODO</p>
+//
+type kotakCariProps = {
+  onCari: (kata: string) => void;
+}
+
+export function KotakCari({ onCari }: kotakCariProps) {
+  return <input onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      onCari(e.currentTarget.value);
+    }
+  }}></input>
 }
