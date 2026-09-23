@@ -45,3 +45,6 @@ Union type berguna buat status karena union type memastikan tidak ada ambiguitas
 
 ## Refleksi
 Karena ini pertama kali menggunakan TS, sedikit membinggungkan bahasanya dibanding dengan go lang untuk backend. aku baru tau kegunaan fragment itu biar mengurangi div div yang tidak perlu tapi masih bisa ngewrap sesuatu biar rapi. terus untuk jsx masih agak bingung tapi yang aku dapet itu buat jika mau makai fitur" html bisa menggunakan jsx.
+
+## Refleksi Pertemuan 3
+Pertemuan-03: saya ngerasa agak bingung dengan pemanggilan method yang beda banget dari C# yang pernah diajarin dulu. Syntax () dan {} dan juga kapan harus makai => masih sedikit bingung, tapi lama kelamaan terbiasa. saat tugas pertemuan-02, untuk props aku menggunakan "interface", tapi habis bahas" sama teman" menggunakan type lebih sesuai dengan kebutuhan. bagian conditional rendering sudah cukup mengerti, dari soalnya jelas apa yang harus di render dan kapan menggunakan if/else, ternary operator, atau logical operator.
