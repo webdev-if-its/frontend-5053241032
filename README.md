@@ -48,3 +48,6 @@ Karena ini pertama kali menggunakan TS, sedikit membinggungkan bahasanya dibandi
 
 ## Refleksi Pertemuan 3
 Pertemuan-03: saya ngerasa agak bingung dengan pemanggilan method yang beda banget dari C# yang pernah diajarin dulu. Syntax () dan {} dan juga kapan harus makai => masih sedikit bingung, tapi lama kelamaan terbiasa. saat tugas pertemuan-02, untuk props aku menggunakan "interface", tapi habis bahas" sama teman" menggunakan type lebih sesuai dengan kebutuhan. bagian conditional rendering sudah cukup mengerti, dari soalnya jelas apa yang harus di render dan kapan menggunakan if/else, ternary operator, atau logical operator.
+
+## Refleksi Pertemuan 4
+Pertemuan-04: syntax yang dipelajari di pertemuan 4 ini sangat membingungkan. aku masih belum terbiasa, tapi lama lama juga paham. penggunanaan useState masih sedikit bingung dan aku harus diajarin temenku baru ngerti.
