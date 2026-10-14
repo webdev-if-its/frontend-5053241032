@@ -51,3 +51,10 @@ Pertemuan-03: saya ngerasa agak bingung dengan pemanggilan method yang beda bang
 
 ## Refleksi Pertemuan 4
 Pertemuan-04: syntax yang dipelajari di pertemuan 4 ini sangat membingungkan. aku masih belum terbiasa, tapi lama lama juga paham. penggunanaan useState masih sedikit bingung dan aku harus diajarin temenku baru ngerti.
+
+## Refleksi Pertemuan 6
+Alasan butuh cleanup: Timer dan event listener berjalan di luar lifecycle React. Tanpa fungsi cleanup, mereka tidak otomatis terhapus saat komponen unmount atau efek dijalankan ulang.
+
+Dampak jika lupa cleanup: Terjadi kebocoran memori, penumpukan handler yang terpanggil berkali-kali untuk satu event, serta timer lama yang tetap memperbarui state pada komponen yang sudah tidak ada.
+
+Fungsi StrictMode: Menjalankan efek dua kali secara sengaja di mode development untuk menguji apakah fungsi cleanup bekerja dengan baik. Jika perilaku aplikasi bermasalah saat render ganda ini, berarti cleanup-nya belum benar.
