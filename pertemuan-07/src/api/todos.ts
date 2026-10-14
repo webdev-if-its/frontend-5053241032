@@ -10,7 +10,7 @@ export const BASE_URL = 'https://jsonplaceholder.typicode.com/todos'
 export async function getTodos(): Promise<Todo[]> {
   const response = await fetch(BASE_URL)
   if (!response.ok) {
-    throw new Error('Failed to fetch todos')
+    throw new Error("Gagal mengambil data")
   }
   const todos: Todo[] = await response.json()
   return todos
