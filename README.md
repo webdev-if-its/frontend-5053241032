@@ -58,3 +58,9 @@ Alasan butuh cleanup: Timer dan event listener berjalan di luar lifecycle React.
 Dampak jika lupa cleanup: Terjadi kebocoran memori, penumpukan handler yang terpanggil berkali-kali untuk satu event, serta timer lama yang tetap memperbarui state pada komponen yang sudah tidak ada.
 
 Fungsi StrictMode: Menjalankan efek dua kali secara sengaja di mode development untuk menguji apakah fungsi cleanup bekerja dengan baik. Jika perilaku aplikasi bermasalah saat render ganda ini, berarti cleanup-nya belum benar.
+
+## Refleksi Pertemuan 9
+
+Memisahkan fungsi API dari komponen membuat komponen hanya fokus mengurus state dan tampilan, sementara detail HTTP (URL, method, header, JSON.stringify) ada di satu tempat. Jadi kalau alamat API atau cara request berubah, cukup edit satu file, fungsinya bisa dipakai ulang oleh banyak komponen, dan lebih mudah di-test atau di-mock.
+
+fetch tidak otomatis melempar error untuk respons 404/500 karena dari sisi jaringan request-nya berhasil: server tetap membalas, hanya saja dengan status error. fetch hanya menolak promise (reject) kalau request gagal total, misalnya jaringan putus. Karena itu kita harus memeriksa res.ok sendiri dan melempar Error kalau nilainya false.
