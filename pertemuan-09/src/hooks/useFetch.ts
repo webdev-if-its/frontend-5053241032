@@ -24,9 +24,18 @@ export function useFetch<T>(
 
   useEffect(() => {
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Gagal mengambil data');
+        }
+        return res.json();
+      })
       .then((result: T) => {
         setData(result);
+        setLoading(false);
+      })
+      .catch((err: Error) => {
+        setError(err.message);
         setLoading(false);
       });
   }, []);
