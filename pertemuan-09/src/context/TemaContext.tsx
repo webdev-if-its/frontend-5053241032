@@ -7,10 +7,30 @@
 //   { tema, gantiTema }, dan MELEMPAR Error yang pesannya menyebut
 //   "TemaProvider" kalau dipakai di luar TemaProvider.
 // Beri tipe yang tepat — lihat SOAL.md untuk tanda tangan lengkapnya.
-export function TemaProvider(props: any) {
-  return <>{props.children}</>
+import { createContext, useState, useContext, ReactNode } from 'react';
+import { Tema } from '../types';
+
+interface TemaContextType {
+  tema: Tema;
+  gantiTema: () => void;
 }
 
-export function useTema(): any {
-  throw new Error('TODO')
+const TemaContext = createContext<TemaContextType | undefined>(undefined);
+
+export function TemaProvider({ children }: { children: ReactNode }) {
+  const [tema, setTema] = useState<Tema>('terang');
+
+  const gantiTema = () => {
+    setTema((prevTema) => (prevTema === 'terang' ? 'gelap' : 'terang'));
+  };
+
+  return (
+    <TemaContext.Provider value={{ tema, gantiTema }}>
+      {children}
+    </TemaContext.Provider>
+  );
+}
+
+export function useTema(): TemaContextType {
+  return useContext(TemaContext) as TemaContextType;
 }
