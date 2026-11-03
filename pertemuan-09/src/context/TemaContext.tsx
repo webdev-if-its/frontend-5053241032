@@ -32,5 +32,11 @@ export function TemaProvider({ children }: { children: ReactNode }) {
 }
 
 export function useTema(): TemaContextType {
-  return useContext(TemaContext) as TemaContextType;
+  const context = useContext(TemaContext);
+
+  if (context === undefined) {
+    throw new Error('useTema harus dipakai di dalam <TemaProvider>');
+  }
+
+  return context;
 }
