@@ -23,6 +23,10 @@ export function useFetch<T>(
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    setLoading(true);
+    setError(null);
+    setData(null);
+
     fetch(url)
       .then((res) => {
         if (!res.ok) {
@@ -38,7 +42,7 @@ export function useFetch<T>(
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [url]);
 
   return { data, loading, error };
 }
