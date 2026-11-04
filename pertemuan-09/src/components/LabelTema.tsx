@@ -3,6 +3,12 @@
 // props, tapi harus ikut berubah saat TombolTema diklik (berbagi state lewat
 // Context, bukan props drilling).
 // Lihat SOAL.md untuk kontrak lengkap.
-export function LabelTema(props: any) {
-  return <p>TODO</p>
+import { useTema } from '../context/TemaContext';
+
+export function LabelTema() {
+  const { tema } = useTema();
+
+  return (
+    <span>Tema saat ini: {tema}</span>
+  );
 }
