@@ -34,6 +34,7 @@ export function TemaProvider({ children }: { children: ReactNode }) {
 export function useTema(): TemaContextType {
   const context = useContext(TemaContext);
 
+  // Level 8: Lempar error jika dipakai di luar provider
   if (context === undefined) {
     throw new Error('useTema harus dipakai di dalam <TemaProvider>');
   }
