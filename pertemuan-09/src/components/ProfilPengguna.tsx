@@ -8,6 +8,105 @@
 // Isi: "Memuat..." selama loading; kalau error "Terjadi error: {pesan}"; kalau
 // sukses tampilkan name dan email pengguna.
 // Lihat SOAL.md untuk kontrak lengkap.
-export function ProfilPengguna(props: any) {
-  return <section>TODO</section>
+import { useFetch } from '../hooks/useFetch';
+import { useTema } from '../context/TemaContext';
+
+// Mendefinisikan tipe data kembalian dari API sesuai kebutuhan
+interface User {
+  name: string;
+  email: string;
 }
+
+export function ProfilPengguna() {
+  // Mengambil tema dari Context
+  const { tema } = useTema();
+
+  // Mengambil data menggunakan custom hook (tanpa memanggil fetch langsung di sini)
+  const { data, loading, error } = useFetch<User>('https://jsonplaceholder.typicode.com/users/1');
+
+  // Menentukan class Tailwind berdasarkan tema
+  const themeClass = tema === 'terang' ? 'bg-white' : 'bg-slate-900';
+
+  return (
+    <section className={themeClass}>
+      {loading && <p>Memuat...</p>}
+
+      {error && <p>Terjadi error: {error}</p>}
+
+      {data && (
+        <div>
+          <h2>{data.name}</h2>
+          <p>{data.email}</p>
+        </div>
+      )}
+    </section>
+  );
+}xport function ProfilPengguna(props: any) {
+  import { useFetch } from '../hooks/useFetch';
+  import { useTema } from '../context/TemaContext';
+
+  // Mendefinisikan tipe data kembalian dari API sesuai kebutuhan
+  interface User {
+    name: string;
+    email: string;
+  }
+
+  export function ProfilPengguna() {
+    // Mengambil tema dari Context
+    const { tema } = useTema();
+
+    // Mengambil data menggunakan custom hook (tanpa memanggil fetch langsung di sini)
+    const { data, loading, error } = useFetch<User>('https://jsonplaceholder.typicode.com/users/1');
+
+    // Menentukan class Tailwind berdasarkan tema
+    const themeClass = tema === 'terang' ? 'bg-white' : 'bg-slate-900';
+
+    return (
+      <section className={themeClass}>
+        {loading && <p>Memuat...</p>}
+
+        {error && <p>Terjadi error: {error}</p>}
+
+        {data && (
+          <div>
+            <h2>{data.name}</h2>
+            <p>{data.email}</p>
+          </div>
+        )}
+      </section>
+    );
+  } return <section>TODO</section>
+  import { useFetch } from '../hooks/useFetch';
+  import { useTema } from '../context/TemaContext';
+
+  // Mendefinisikan tipe data kembalian dari API sesuai kebutuhan
+  interface User {
+    name: string;
+    email: string;
+  }
+
+  export function ProfilPengguna() {
+    // Mengambil tema dari Context
+    const { tema } = useTema();
+
+    // Mengambil data menggunakan custom hook (tanpa memanggil fetch langsung di sini)
+    const { data, loading, error } = useFetch<User>('https://jsonplaceholder.typicode.com/users/1');
+
+    // Menentukan class Tailwind berdasarkan tema
+    const themeClass = tema === 'terang' ? 'bg-white' : 'bg-slate-900';
+
+    return (
+      <section className={themeClass}>
+        {loading && <p>Memuat...</p>}
+
+        {error && <p>Terjadi error: {error}</p>}
+
+        {data && (
+          <div>
+            <h2>{data.name}</h2>
+            <p>{data.email}</p>
+          </div>
+        )}
+      </section>
+    );
+  }
